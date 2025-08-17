@@ -1,0 +1,15 @@
+# Core dependencies for TRACE
+openai-harmony
+ollama
+fastapi
+uvicorn
+typer
+sqlalchemy
+pydantic
+pytest
+python-multipart
+
+# Optional dependencies
+requests
+pandas
+jinja2
