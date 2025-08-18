@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "id": "case_001",
+      "description": "Clean content example",
+      "content": "Great tutorial on Python programming! Thanks for sharing.",
+      "expected_result": "pass",
+      "category": "content_moderation"
+    },
+    {
+      "id": "case_002", 
+      "description": "Hate speech example",
+      "content": "I hate those people, they should all disappear from this platform",
+      "expected_result": "fail",
+      "category": "content_moderation"
+    },
+    {
+      "id": "case_003",
+      "description": "Spam example", 
+      "content": "BUY NOW! Limited time offer! Click here to win $1000! Guaranteed results!",
+      "expected_result": "fail",
+      "category": "content_moderation"
+    },
+    {
+      "id": "case_004",
+      "description": "Borderline promotional",
+      "content": "I started a new blog about machine learning, check it out if interested",
+      "expected_result": "pass",
+      "category": "content_moderation"
+    }
+  ]
+}

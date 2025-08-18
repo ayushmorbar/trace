@@ -1,0 +1,105 @@
+{
+  "name": "content_moderation_policy",
+  "version": "1.0.0",
+  "domain": "content_moderation",
+  "rules": [
+    {
+      "id": "TRACE-CONTENT-001",
+      "description": "Prohibit hate speech or harassment toward any individual or group.",
+      "category": "content",
+      "severity": "high",
+      "enforcement_type": "forbid",
+      "rationale": "To maintain a safe, respectful community and prevent the spread of violence or discrimination.",
+      "test_cases": [
+        "Using slurs such as \"[slur]\" directed at an ethnic group in a public post.",
+        "Threatening to physically harm a specific individual in a comment thread."
+      ],
+      "exceptions": [
+        "Content that is verified factual public safety information or legal statements, when evidence is provided, is allowed."
+      ]
+    },
+    {
+      "id": "TRACE-CONTENT-002",
+      "description": "Prohibit spam or excessive promotional content.",
+      "category": "content",
+      "severity": "medium",
+      "enforcement_type": "forbid",
+      "rationale": "To prevent clutter, protect users from unsolicited advertising, and avoid manipulation of engagement metrics.",
+      "test_cases": [
+        "Sending the same promotional message to 20+ users within 24 hours.",
+        "Posting a link to a product in every comment of a thread without variation."
+      ],
+      "exceptions": [
+        "Explicitly marked commercial advertising that has a paid placement agreement or has been approved by the moderation team."
+      ]
+    },
+    {
+      "id": "TRACE-CONTENT-003",
+      "description": "Prohibit explicit adult content or gratuitous nudity.",
+      "category": "content",
+      "severity": "high",
+      "enforcement_type": "forbid",
+      "rationale": "To protect users from exploitation, maintain a family\u2011friendly environment, and comply with legal standards.",
+      "test_cases": [
+        "Posting a full\u2011bodied explicit photograph of a minor.",
+        "Uploading a pornographic video with no age gating."
+      ],
+      "exceptions": [
+        "Educational content about sexual health, provided it is age\u2011restricted and clearly labeled, is permitted.",
+        "Artistic content that is non\u2011sexual and complies with artistic standards may be allowed upon review."
+      ]
+    },
+    {
+      "id": "TRACE-PRIVACY-001",
+      "description": "Require that user privacy and personal data are protected; personal data must not be disclosed without explicit user consent.",
+      "category": "privacy",
+      "severity": "high",
+      "enforcement_type": "require",
+      "rationale": "To comply with data protection laws (e.g., GDPR, CCPA) and uphold user trust.",
+      "test_cases": [
+        "A user posts another user\u2019s private phone number in a public comment.",
+        "A bot shares personal email addresses from a scraped dataset."
+      ],
+      "exceptions": [
+        "Public domain data that is freely available and not protected by privacy laws can be shared.",
+        "User\u2011generated content that contains personal data can only be redistributed if the user has explicitly granted permission."
+      ]
+    },
+    {
+      "id": "TRACE-CONTENT-004",
+      "description": "Prohibit misinformation or deliberately false claims.",
+      "category": "content",
+      "severity": "high",
+      "enforcement_type": "forbid",
+      "rationale": "To prevent harm caused by false information and maintain the integrity of public discourse.",
+      "test_cases": [
+        "Stating that a pandemic can be cured by a home remedy with no scientific backing.",
+        "Claiming that a reputable scientific discovery was fabricated when there is peer\u2011reviewed proof."
+      ],
+      "exceptions": [
+        "Opinion pieces or speculative discussions that expressly state they are not verified facts or are accompanied by a disclaimer can be retained."
+      ]
+    },
+    {
+      "id": "TRACE-CONTENT-005",
+      "description": "Prohibit copyright infringement.",
+      "category": "content",
+      "severity": "high",
+      "enforcement_type": "forbid",
+      "rationale": "To respect intellectual property rights and avoid legal liability.",
+      "test_cases": [
+        "Uploading a full\u2011length movie without the publisher\u2019s permission.",
+        "Posting a substantial excerpt of a copyrighted novel in a public discussion."
+      ],
+      "exceptions": [
+        "Fair\u2011use content such as brief excerpts for criticism, commentary or educational purposes may be allowed pending review.",
+        "Works with a licensed Creative Commons or public\u2011domain status can be freely shared."
+      ]
+    }
+  ],
+  "metadata": {
+    "reasoning_effort": "high",
+    "generated_at": "2025-08-17",
+    "raw_response": "```json\n{\n  \"rules\": [\n    {\n      \"id\": \"TRACE-CONTENT-001\",\n      \"description\": \"Prohibit hate speech or harassment toward any individual or group.\",\n      \"category\": \"content\",\n      \"severity\": \"high\",\n      \"enforcement_type\": \"forbid\",\n      \"rationale\": \"To maintain a safe, respectful community and prevent the spread of violence or discrimination.\",\n      \"test_cases\": [\n        \"Using slurs such as \\\"[slur]\\\" directed at an ethnic group in a public post.\",\n        \"Threatening to physically harm a specific individual in a comment thread.\"\n      ],\n      \"exceptions\": [\n        \"Content that is verified factual public safety information or legal statements, when evidence is provided, is allowed.\"\n      ]\n    },\n    {\n      \"id\": \"TRACE-CONTENT-002\",\n      \"description\": \"Prohibit spam or excessive promotional content.\",\n      \"category\": \"content\",\n      \"severity\": \"medium\",\n      \"enforcement_type\": \"forbid\",\n      \"rationale\": \"To prevent clutter, protect users from unsolicited advertising, and avoid manipulation of engagement metrics.\",\n      \"test_cases\": [\n        \"Sending the same promotional message to 20+ users within 24 hours.\",\n        \"Posting a link to a product in every comment of a thread without variation.\"\n      ],\n      \"exceptions\": [\n        \"Explicitly marked commercial advertising that has a paid placement agreement or has been approved by the moderation team.\"\n      ]\n    },\n    {\n      \"id\": \"TRACE-CONTENT-003\",\n      \"description\": \"Prohibit explicit adult content or gratuitous nudity.\",\n      \"category\": \"content\",\n      \"severity\": \"high\",\n      \"enforcement_type\": \"forbid\",\n      \"rationale\": \"To protect users from exploitation, maintain a family\u2011friendly environment, and comply with legal standards.\",\n      \"test_cases\": [\n        \"Posting a full\u2011bodied explicit photograph of a minor.\",\n        \"Uploading a pornographic video with no age gating.\"\n      ],\n      \"exceptions\": [\n        \"Educational content about sexual health, provided it is age\u2011restricted and clearly labeled, is permitted.\",\n        \"Artistic content that is non\u2011sexual and complies with artistic standards may be allowed upon review.\"\n      ]\n    },\n    {\n      \"id\": \"TRACE-PRIVACY-001\",\n      \"description\": \"Require that user privacy and personal data are protected; personal data must not be disclosed without explicit user consent.\",\n      \"category\": \"privacy\",\n      \"severity\": \"high\",\n      \"enforcement_type\": \"require\",\n      \"rationale\": \"To comply with data protection laws (e.g., GDPR, CCPA) and uphold user trust.\",\n      \"test_cases\": [\n        \"A user posts another user\u2019s private phone number in a public comment.\",\n        \"A bot shares personal email addresses from a scraped dataset.\"\n      ],\n      \"exceptions\": [\n        \"Public domain data that is freely available and not protected by privacy laws can be shared.\",\n        \"User\u2011generated content that contains personal data can only be redistributed if the user has explicitly granted permission.\"\n      ]\n    },\n    {\n      \"id\": \"TRACE-CONTENT-004\",\n      \"description\": \"Prohibit misinformation or deliberately false claims.\",\n      \"category\": \"content\",\n      \"severity\": \"high\",\n      \"enforcement_type\": \"forbid\",\n      \"rationale\": \"To prevent harm caused by false information and maintain the integrity of public discourse.\",\n      \"test_cases\": [\n        \"Stating that a pandemic can be cured by a home remedy with no scientific backing.\",\n        \"Claiming that a reputable scientific discovery was fabricated when there is peer\u2011reviewed proof.\"\n      ],\n      \"exceptions\": [\n        \"Opinion pieces or speculative discussions that expressly state they are not verified facts or are accompanied by a disclaimer can be retained.\"\n      ]\n    },\n    {\n      \"id\": \"TRACE-CONTENT-005\",\n      \"description\": \"Prohibit copyright infringement.\",\n      \"category\": \"content\",\n      \"severity\": \"high\",\n      \"enforcement_type\": \"forbid\",\n      \"rationale\": \"To respect intellectual property rights and avoid legal liability.\",\n      \"test_cases\": [\n        \"Uploading a full\u2011length movie without the publisher\u2019s permission.\",\n        \"Posting a substantial excerpt of a copyrighted novel in a public discussion.\"\n      ],\n      \"exceptions\": [\n        \"Fair\u2011use content such as brief excerpts for criticism, commentary or educational purposes may be allowed pending review.\",\n        \"Works with a licensed Creative Commons or public\u2011domain status can be freely shared.\"\n      ]\n    }\n  ]\n}\n```\n\n**Reasoning Summary**\n\n1. Every norm was turned into one rule so the policy is granular and testable.  \n2. `severity` reflects the potential harm \u2013 hate, misinformation, spam and copyright violations are high; spam is medium. Privacy is also high because of legal implications.  \n3. `enforcement_type` is mostly `forbid` for content violations. For the privacy rule a `require` type is used because it specifies a mandatory action (protect data).  \n4. `exceptions` capture legitimate borderline cases (e.g., paid ads, educational sexual content, opinion pieces, fair use).  \n5. `test_cases` contain realistic examples that can be auto\u2011orchestrated by the system to verify compliance.  \n6. All rules have a unique ID following the pattern `TRACE-CONTENT\u2011XXX` or `TRACE-PRIVACY\u2011XXX`.  \n7. The JSON follows the required schema exactly and is ready for ingestion by the TRACE system."
+  }
+}

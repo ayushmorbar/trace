@@ -24,6 +24,7 @@ setup(
     entry_points={
         "console_scripts": [
             "trace_offbeats=trace_offbeats.cli:app",
+            "trace=trace_offbeats.cli:app",
         ],
     },
 )
